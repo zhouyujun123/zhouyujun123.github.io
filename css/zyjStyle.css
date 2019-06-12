@@ -1,0 +1,445 @@
+/*===reset===*/
+body {
+    color:#222;
+    -webkit-text-size-adjust:none;
+}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl, dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe {
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;
+}
+body,button,input,select,textarea {
+    font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+    font-size:62.5%;
+    line-height:1.5;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;
+    font-weight: normal;
+}
+fieldset,img{
+    border:0;
+    display:inline-block;
+}
+address,caption,cite,dfn,em,th,var{
+    font-style:normal;
+    font-weight:normal;
+}
+article,aside,details,figcaption,figure,footer,header,
+hgroup, menu,nav, section,summary,time,mark,audio,video {
+    display:block;
+    margin:0;
+    padding:0;
+}/* HTML5 */
+code,kbd,pre,samp{
+    font-family:courier new,courier,monospace
+}
+ol,ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#222;
+}
+a:hover{
+    color:#000;
+    text-decoration: none;
+    zoom:1
+}
+a:active{
+    color:#666;
+}
+sup{
+    vertical-align:text-top;
+}
+sub{
+    vertical-align:text-bottom;
+}
+input,select,button{
+    vertical-align: baseline;
+    *vertical-align:middle;
+    font-family: tahoma, \5b8b\4f53, arial;
+    font-size: 100%;
+}
+input[type=checkbox],input[type=radio]{
+    vertical-align:middle;
+    margin:0 5px;
+}
+input[type="text"],input[type="password"],textarea{
+    outline-style:none;
+    -webkit-appearance:none;
+}
+textarea{
+    resize:none;
+}
+textarea{
+    overflow:auto;
+    font:100% tahoma,\5b8b\4f53,arial;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/*===reset end===*/
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.cardMyself{
+    width:25%;
+    height:100%;
+    margin-left: 200px;
+    z-index: 1;
+}
+.cardMyself2{
+    width:45%;
+    height:60%;
+    margin-left: 650px;
+    margin-top:150px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #888888;
+    background: url(../imge/timg.gif);
+
+}
+.section-wrap{
+    width:100%;
+    height:100%;
+    overflow:visible;
+    transition:transform 1s cubic-bezier(0.86,0,0.03,1);
+    -webkit-transition:-webkit-transform 1s cubic-bezier(0.86,0,0.03,1);
+    -ms-transition:-ms-transform 1s cubic-bezier(0.86,0,0.03,1);
+    -moz-transition:-moz-transform 1s cubic-bezier(0.86,0,0.03,1);
+    -o-transition:-o-transform 1s cubic-bezier(0.86,0,0.03,1);
+}
+.section-wrap .section{
+    position:relative;
+    /*width:100%;*/
+    height:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+.section-wrap .section .title{
+    padding:150px 250px 0 250px;
+    color:#fff;
+    font-size:20px;
+    text-align:center;
+}
+.section-wrap .section .title2{
+    padding-top:50px;
+    color:#fff;
+    font-size:20px;
+}
+
+.section-wrap .section .title p{
+    opacity:1
+}
+.section-wrap .section .title .p-2{
+    color:#ccc;
+    font-size:18px;
+}
+.section-wrap .section .title3 .p-1{
+    color:#ffffff;
+    font-size:20px;
+}
+.section-wrap .section .title3 .p-2{
+    color:#ffffff;
+    font-size:18px;
+}
+.section-wrap .section .title2 .p-2{
+    color:#ffffff;
+    font-size:15px;
+}
+.section-wrap .section .title.active .p-1{
+    opacity:1;
+    transform:translateY(-25px);
+    -webkit-transform:translateY(-25px);
+    -ms-transform:translateY(-25px);
+    -moz-transform:translateY(-25px);
+    -o-transform:translateY(-25px);
+    transition:all 2s cubic-bezier(0.86,0,0.8,1);
+    -webkit-transition:all 2s cubic-bezier(0.86,0,0.8,1);
+    -ms-transition:all 2s cubic-bezier(0.86,0,0.8,1);
+    -moz-transition:all 2s cubic-bezier(0.86,0,0.8,1);
+    -o-transition:all 2s cubic-bezier(0.86,0,0.8,1);
+}
+.section-wrap .section .title.active .p-2{
+    opacity:1;
+    transform:translateY(-25px);
+    -webkit-transform:translateY(-25px);
+    -ms-transform:translateY(-25px);
+    -moz-transform:translateY(-25px);
+    -o-transform:translateY(-25px);
+    transition:all 2s cubic-bezier(0.5,0,0.9,1);
+    -webkit-transition:all 2s cubic-bezier(0.5,0,0.9,1);
+    -ms-transition:all 2s cubic-bezier(0.5,0,0.9,1);
+    -moz-transition:all 2s cubic-bezier(0.5,0,0.9,1);
+    -o-transition:all 2s cubic-bezier(0.5,0,0.9,1);
+}
+
+.section-wrap .section-1{
+    background-color:#ba9897
+}
+.section-wrap .section-2{
+    background-color:#e6dfcf;
+}
+.section-wrap .section-3{
+    background-color:#c9adc3
+}
+.section-wrap .section-4{
+    background-color:#8a4f63
+}
+.section-wrap .section-5{
+    background-color:#ab7267
+}
+.put-section-0{
+    transform:translateY(0);
+    -webkit-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -o-transform:translateY(0);
+}
+.put-section-1{
+    transform:translateY(-100%);
+    -webkit-transform:translateY(-100%);
+    -ms-transform:translateY(-100%);
+    -moz-transform:translateY(-100%);
+    -o-transform:translateY(-100%);
+}
+.put-section-2{
+    transform:translateY(-200%);
+    -webkit-transform:translateY(-200%);
+    -ms-transform:translateY(-200%);
+    -moz-transform:translateY(-200%);
+    -o-transform:translateY(-200%);
+}
+.put-section-3{
+    transform:translateY(-300%);
+    -webkit-transform:translateY(-300%);
+    -ms-transform:translateY(-300%);
+    -moz-transform:translateY(-300%);
+    -o-transform:translateY(-300%);
+}
+.put-section-4{
+    transform:translateY(-400%);
+    -webkit-transform:translateY(-400%);
+    -ms-transform:translateY(-400%);
+    -moz-transform:translateY(-400%);
+    -o-transform:translateY(-400%);
+}
+.section-btn{
+    position:fixed;
+    right:40px;
+    top:50%;
+    width:14px;
+}
+.section-btn li{
+    border-radius: 25px;
+    margin-bottom:15px;
+    background:black;
+    opacity:0.2;
+    text-align:center;
+    cursor:pointer;
+}
+.section-btn li.cur{
+    border-radius: 25px;
+    background:black;
+    opacity:0.5;
+}
+.go-btn{
+    opacity:1;
+    webkit-animation:go-btn 3s cubic-bezier(0.5,0,0.1,1)infinite;
+    -webkit-animation:go-btn 3s cubic-bezier(0.5,0,0.1,1)infinite;
+    -ms-animation:go-btn 3s cubic-bezier(0.5,0,0.1,1)infinite;
+    -moz-animation:go-btn 3s cubic-bezier(0.5,0,0.1,1)infinite;
+    -o-animation:go-btn 3s cubic-bezier(0.5,0,0.1,1)infinite;
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    position:absolute;bottom:10px;left:48%;
+    width:60px; height:60px; border-radius:100%; line-height:60px; text-align:center; font-size:20px; color:#fff; border:1px solid #fff; cursor:pointer; overflow:hidden}
+.go-btn:hover{
+    animation-play-state:paused;
+    -webkit-animation-play-state:paused;
+    -ms-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+}
+
+@keyframes go-btn{
+%0,%100{bottom:10px; opacity:1;}
+50%{bottom:50px; opacity:.5}
+}
+@-webkit-keyframes go-btn{
+%0,%100{bottom:10px; opacity:1;}
+50%{bottom:50px; opacity:.5}
+}
+@-ms-keyframes go-btn{
+%0,%100{bottom:10px; opacity:1;}
+50%{bottom:50px; opacity:.5}
+}
+@-moz-keyframes go-btn{
+%0,%100{bottom:10px; opacity:1;}
+50%{bottom:50px; opacity:.5}
+}
+@-o-keyframes go-btn{
+%0,%100{bottom:10px; opacity:1;}
+50%{bottom:50px; opacity:.5}
+}
+
+/*第三页的卡片样式*/
+ul.cards {
+    width: 660px;
+    margin: 0 200px ;
+    height: 300px;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 0;
+    cursor: pointer;
+}
+ul.cards li.title {
+    margin: 0 0 20px;
+}
+ul.cards li.card {
+    background: #FFF;
+    overflow: hidden;
+    height: 450px;
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    box-shadow: 1px 2px 2px 0 #aaa;
+    -webkit-transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
+    transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
+}
+ul.cards li.card img {
+    max-width: 100%;
+    /*padding: 5px;*/
+    text-align: center;
+    height: 200px;
+}
+ul.cards li.card div.content {
+    /*padding: 5px 10px;*/
+    text-align: center;
+    font-size: 20px;
+}
+
+/*然后使用rotateZ和z-index属性来将图片堆叠在一起并分别旋转一定的角度。
+同时为后面两张卡片添加transition-delay，用于在卡片展开和收缩时有一定的延迟时间。*/
+ul.cards li.card.card-1 {
+    z-index: 10;
+    -webkit-transform: rotateZ(-2deg);
+    transform: rotateZ(-2deg);
+}
+ul.cards li.card.card-2 {
+    z-index: 9;
+    -webkit-transform: rotateZ(-7deg);
+    transform: rotateZ(-7deg);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+ul.cards li.card.card-3 {
+    z-index: 8;
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+ul.cards li.card.card-4 {
+    z-index: 7;
+    -webkit-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+ul.cards li.card.card-5 {
+    z-index: 6;
+    -webkit-transform: rotateZ(15deg);
+    transform: rotateZ(15deg);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+/*在堆叠卡片被点击的时候，ul.card元素被添加了transition class，这个class用于执行卡片的展开动画。*/
+ul.cards.transition li.card {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+}
+ul.cards.transition li.card.card-1 {
+    left: 960px;
+}
+ul.cards.transition li.card.card-2 {
+    left: 720px;
+}
+ul.cards.transition li.card.card-3 {
+    left: 480px;
+}
+ul.cards.transition li.card.card-4 {
+    left: 240px;
+}
+
+.main {
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%,-50%);
+    -webkit-perspective: 1500;
+    -moz-perspective: 1500;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 400px;
+    transition: all 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.b1{
+    background:rgba(201,173,195,0.5);
+}
+.b2 {
+    background:rgba(255,255,255,0.5);
+    transform: rotateY(-180deg);
+}
+.section-wrap .section .main .box .p-1{
+    padding: 50px 50px;
+    font-size: 20px;
+    color:#ffffff;
+}
+.section-wrap .section .main .box .p-1-1{
+    padding: 30px 50px;
+    font-size: 20px;
+    color:#ffffff;
+}
+.section-wrap .section .main .box .p-2{
+    padding: 20px 70px;
+    font-size: 17px;
+    color:#ffffff;
+}
+.section-wrap .section .main .box .p-2-2{
+    padding: 10px 70px;
+    font-size: 17px;
+    color:#ffffff;
+}
+/*图片旋转*/
+.an{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 10s linear infinite;
+    -moz-animation: rotation 10s linear infinite;
+    -webkit-animation: rotation 10s linear infinite;
+    -o-animation: rotation 10s linear infinite;
+}
+@-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}

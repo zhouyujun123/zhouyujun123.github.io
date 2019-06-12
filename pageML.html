@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>滚动翻页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="renderer" content="webkit">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!--鼠标滚轮mousewheel插件-->
+    <script>
+        !function (a) {"function" == typeof define && define.amd ? define(["jquery"], a) : "object" == typeof exports ? module.exports = a : a(jQuery) } (function (a) { function b(b) { var g = b || window.event, h = i.call(arguments, 1), j = 0, l = 0, m = 0, n = 0, o = 0, p = 0; if (b = a.event.fix(g), b.type = "mousewheel", "detail" in g && (m = -1 * g.detail), "wheelDelta" in g && (m = g.wheelDelta), "wheelDeltaY" in g && (m = g.wheelDeltaY), "wheelDeltaX" in g && (l = -1 * g.wheelDeltaX), "axis" in g && g.axis === g.HORIZONTAL_AXIS && (l = -1 * m, m = 0), j = 0 === m ? l : m, "deltaY" in g && (m = -1 * g.deltaY, j = m), "deltaX" in g && (l = g.deltaX, 0 === m && (j = -1 * l)), 0 !== m || 0 !== l) { if (1 === g.deltaMode) { var q = a.data(this, "mousewheel-line-height"); j *= q, m *= q, l *= q } else if (2 === g.deltaMode) { var r = a.data(this, "mousewheel-page-height"); j *= r, m *= r, l *= r } if (n = Math.max(Math.abs(m), Math.abs(l)), (!f || f > n) && (f = n, d(g, n) && (f /= 40)), d(g, n) && (j /= 40, l /= 40, m /= 40), j = Math[j >= 1 ? "floor" : "ceil"](j / f), l = Math[l >= 1 ? "floor" : "ceil"](l / f), m = Math[m >= 1 ? "floor" : "ceil"](m / f), k.settings.normalizeOffset && this.getBoundingClientRect) { var s = this.getBoundingClientRect(); o = b.clientX - s.left, p = b.clientY - s.top } return b.deltaX = l, b.deltaY = m, b.deltaFactor = f, b.offsetX = o, b.offsetY = p, b.deltaMode = 0, h.unshift(b, j, l, m), e && clearTimeout(e), e = setTimeout(c, 200), (a.event.dispatch || a.event.handle).apply(this, h) } } function c() { f = null } function d(a, b) { return k.settings.adjustOldDeltas && "mousewheel" === a.type && b % 120 === 0 } var e, f, g = ["wheel", "mousewheel", "DOMMouseScroll", "MozMousePixelScroll"], h = "onwheel" in document || document.documentMode >= 9 ? ["wheel"] : ["mousewheel", "DomMouseScroll", "MozMousePixelScroll"], i = Array.prototype.slice; if (a.event.fixHooks) for (var j = g.length; j; ) a.event.fixHooks[g[--j]] = a.event.mouseHooks; var k = a.event.special.mousewheel = { version: "3.1.12", setup: function () { if (this.addEventListener) for (var c = h.length; c; ) this.addEventListener(h[--c], b, !1); else this.onmousewheel = b; a.data(this, "mousewheel-line-height", k.getLineHeight(this)), a.data(this, "mousewheel-page-height", k.getPageHeight(this)) }, teardown: function () { if (this.removeEventListener) for (var c = h.length; c; ) this.removeEventListener(h[--c], b, !1); else this.onmousewheel = null; a.removeData(this, "mousewheel-line-height"), a.removeData(this, "mousewheel-page-height") }, getLineHeight: function (b) { var c = a(b), d = c["offsetParent" in a.fn ? "offsetParent" : "parent"](); return d.length || (d = a("body")), parseInt(d.css("fontSize"), 10) || parseInt(c.css("fontSize"), 10) || 16 }, getPageHeight: function (b) { return a(b).height() }, settings: { adjustOldDeltas: !0, normalizeOffset: !0} }; a.fn.extend({ mousewheel: function (a) { return a ? this.bind("mousewheel", a) : this.trigger("mousewheel") }, unmousewheel: function (a) { return this.unbind("mousewheel", a) } }) });
+    </script>
+    <!--mousewheel插件 end-->
+
+    <style type="text/css">
+        @import url("css/zyjStyle.css");
+    </style>
+    <!--[if lte IE 8]>
+    <style type="text/css">
+        html,body{width:100%; height:100%; overflow:scroll}
+        .section-btn{display:none;}
+    </style>
+    <![endif]-->
+</head>
+<body>
+
+<div class="section-wrap">
+    <div class="section section-1">
+        <div class="title active">
+            <img class="an" src="imge/zyj.gif" alt="Smiley face" width="180" height="180">
+            <p  class="p-1" style="border-bottom:1px solid #ffffff;padding-bottom: 20px;padding-top: 30px;">
+                    无论这个世界对你怎样，都请你一如既往的努力、勇敢、充满希望。
+            </p>
+            <p class="p-2" style="padding-bottom: 20px;padding-top: 30px;">我叫周昱君</p>
+            <p class="p-2" style="padding-bottom: 20px;">期望成为一名前端工程师</p>
+            <p class="p-2" style="padding-bottom: 20px;">邮箱：1371630266@qq.com</p>
+            <p class="p-2" style="padding-bottom: 20px;">电话：17857021216</p>
+        </div>
+    </div>
+    <div class="section section-2">
+        <div class="cardMyself" style="background: url(imge/1234.jpg);position: absolute;">
+            <div class="title2">
+                <p class="p-1" style="padding:10px 20px">毕业院校：浙江大学宁波理工学院</p>
+                <p class="p-2" style="padding:10px 20px">专业：电子信息工程</p>
+                <p class="p-2" style="padding:10px 20px">年级排名：17/71</p>
+                <p class="p-2" style="padding:10px 20px">学历：本科（2019年6月毕业）</p>
+                <p class="p-2" style="padding:10px 20px">坐标：杭州</p>
+                <p class="p-1" style="border-bottom:1px solid #ffffff;padding:30px 20px">学校奖励</p>
+                <p class="p-2" style="padding:10px 20px">2016学年获得优秀学生二等奖学金</p>
+                <p class="p-2" style="padding:10px 20px">2017学年获得优秀学生三等奖学金</p>
+                <p class="p-1" style="border-bottom:1px solid #ffffff;padding:30px 20px">证书</p>
+                <p class="p-2" style="padding:10px 20px">获得ETC-4证书</p>
+            </div>
+        </div>
+        <div class="cardMyself2" style="position: absolute;">
+            <div class="title3">
+                <p class="p-1" style="padding:30px 50px">自我评价</p>
+                <p class="p-2" style="padding:10px 50px">
+                八月的狮子座女生，<br><br>
+                热爱生活，兴趣广泛，<br><br>
+                积极对待自己和身边的人。<br><br>
+                执着于突破自我，<br><br>
+                积极钻研技术。</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-3">
+        <div class="title">
+            <p class="p-1">技术支持</p>
+        </div>
+        <ul class="cards">
+            <li class="card card-1"><img src="imge/tree1.gif"/>
+                <div class="content">
+                    <p style="padding-top:10px;">JavaScript</p>
+                    <p style="padding:10px;">通过自学了解该语言的基础语法与基本的使用方法，可以写简单的动画。</p>
+                </div>
+            </li>
+            <li class="card card-2"><img src="imge/tree2.gif"/>
+                <div class="content">
+                    <p style="padding-top:10px;">HTML</p>
+                    <p style="padding:10px;">在毕业设计中了解过该语言的基本使用方法，可以结合自己的设计图写出有趣的布局。</p>
+                </div>
+            </li>
+            <li class="card card-3"><img src="imge/tree3.gif"/>
+                <div class="content">
+                    <p style="padding-top:10px;">CSS</p>
+                    <p style="padding:10px;">和HTML结合使用，为基本的布局润色，基本了解该语言。</p>
+                </div>
+            </li>
+            <li class="card card-4"><img src="imge/tree4.gif"/>
+                <div class="content">
+                    <p style="padding-top:10px;">jQuery</p>
+                    <p style="padding:10px;">学习JavaScript的时候接触过jQuery，可以使用jQuery的插件实现自己想要的页面效果。</p>
+                </div>
+            </li>
+            <li class="card card-5"><img src="imge/tree5.gif"/>
+                <div class="content">
+                    <p style="padding-top:10px;">Vue</p>
+                    <p style="padding:10px;">在大四半年的实习中运用此框架进行网页设计，同时使用了element-UI框架，了解Vue的运行流程。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="section section-4">
+        <div class="title">
+            <p class="p-1">实践经历</p>
+        </div>
+        <div class="main">
+            <div class="box b1">
+                <p class="p-1">实习公司：宁波新融易（浙江）有限公司</p>
+                <p class="p-2">实习职位：前端工程师</p>
+                <p class="p-2">实习扮演角色：协助团队前端工程师使用Vue搭建开发天罗地网项目前端页面，同时使用axios进行前后端数据的交互</p>
+            </div>
+            <div class="box b2">
+                <p class="p-1-1">实习心得</p>
+                <p class="p-2-2">在该公司我第一次接触到了前端的三大主流框架之一Vue框架，在摸索</p>
+                <p class="p-2-2">这个框架的过程中，我遇到了很多的困难。在解决了这些问题后 ，我</p>
+                <p class="p-2-2">将这些问题全部写在了笔记本上。学习就是一个不断成长，不断接受</p>
+                <p class="p-2-2">新知识的一个过程。在这个过程中一定要有所成长，才不会被淘汰 ，</p>
+                <p class="p-2-2">积极的解决问题并且积累经验才是我们在工作中应该做到的基本。</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="title">
+            <p class="p-1">我的联系方式</p>
+            <p class="p-2">联系电话：17857021216</p>
+            <p class="p-2">qq邮箱：1371630266@qq.com</p>
+            <img class="p-1" src="imge/tree6.gif"/>
+        </div>
+    </div>
+</div>
+<ul class="section-btn">
+    <li class="cur">·</li>
+    <li>·</li>
+    <li>·</li>
+    <li>·</li>
+    <li>·</li>
+</ul>
+<div class="go-btn">«</div>
+</body>
+
+<script src="js/zyjJavaScript.js"></script>
+
+</html>
