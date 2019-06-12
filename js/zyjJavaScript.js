@@ -66,11 +66,11 @@ jQuery(document).ready(function ($) {
 
 var b1 = document.querySelector(".b1");
 var b2 = document.querySelector(".b2");
-b1.onclick = function() {
+b1.onclick = function($) {
     b1.style.transform = "rotateY(180deg)";
     b2.style.transform = "rotateY(0deg)";
-}
-b2.onclick = function() {
+};
+b2.onclick = function($) {
     b2.style.transform = "rotateY(-180deg)";
     b1.style.transform = "rotateY(0deg)";
-}
+};
